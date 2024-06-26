@@ -3,12 +3,12 @@ import CartContext from '/home/siddham/projects/react-winings/src/context/CartCo
 
 function Cart() {
     const { cart, decreaseQuantity } = useContext(CartContext);
-
+    console.log(cart);
     return (
         <div>
             {Object.values(cart).map((product) => (
                 <div key={product.id}>
-                    <h2>{product.name}</h2>
+                    <h2>{product.title}</h2>
                     <p>Quantity: {product.quantity}</p>
                     <button onClick={() => decreaseQuantity(product)}>Remove one</button>
                 </div>
